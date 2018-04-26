@@ -13,25 +13,20 @@ res_LIM byte "N. elementos superiores a%d e igual a %d", 13, 10, 0
 
 .code
 
+MAXFREQ proc (register....)   ptseq: ptr sword, nelem: dword
+.........
+MAXFREQ ENDP
+...
+
+LIM proc pt.seq:ptr sword, nelem: dword, limite: sword
+......
+LIM endp
+
 main PROC c
-mov ecx, lengthof string  
-mov esi, offset string
 
-
-push_words: movzx edx,byte ptr[esi]
-			push edx
-			inc esi
-			loop push_words
-
-mov ecx, LENGTHOF string 
-
-Pop_words: pop ebx
-		   push ecx    ;;;;;;;;printf estraga ecx, por isso guarda-se valor na pilha e depois volta se a ver
-		   invoke printf, offset msg, bl
-		   pop ecx
-		   loop Pop_words
-invoke _getch
-invoke ExitProcess, 0
+invoke printf, offset msg_ler
+invoke scanf, offset fmt_ler, offset valor
+invoke LIM, offset seq, lengthof seq, valor
 
 main endp
 end

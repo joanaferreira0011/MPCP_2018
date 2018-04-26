@@ -33,4 +33,9 @@
       <Filter>Header Files</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="area_circle.asm">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
