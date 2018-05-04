@@ -2,7 +2,7 @@ include mpcp.inc
 .xmm
 
 .data
-yup REAL4 1.0, 20.0, 5.0, 7.0, 15.0, 2.0, 3.0, 1.0
+yup REAL4 1.0, 20.0, 5.0, 7.0, 15.0, 2.0, 3.0, 1.0 ;test
 alpha REAL4 2.0
 
 .code
